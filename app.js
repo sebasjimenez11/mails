@@ -32,12 +32,12 @@ app.post("/mails", async (req, res) => {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Configurado en .env
-        pass: process.env.EMAIL_PASS, // Contraseña de aplicación en .env
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS, 
       },
     });
 
-    // Crear un arreglo de promesas para enviar los correos
+ 
     const promises = emails.map((email) =>
       transporter.sendMail({
         from: process.env.EMAIL_USER, // Remitente

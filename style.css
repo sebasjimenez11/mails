@@ -1,0 +1,206 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: rgb(247, 247, 247);
+}
+
+.main-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #485299;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Separation between containers */
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container-personas,
+.container-correos {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 35%; /* Ensure consistency in width */
+}
+
+.container-correos{
+    width: 50%; 
+}
+
+.container-personas {
+    width: 40%;
+}
+
+.section-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 2%;
+  color: #485299;
+  text-align: center;
+}
+
+.agregar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.agregar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.agregar button {
+  padding: 10px 20px;
+  background-color: #485299;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Persona {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 3% auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Persona:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.Persona i {
+  font-size: 24px;
+  color: #485299;
+}
+
+.Persona p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.container-correos input,
+.container-correos textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  margin: 2% auto;
+}
+
+.container-correos textarea {
+  height: 200px;
+  resize: none;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.options i {
+  cursor: pointer;
+  color: #485299;
+}
+
+.options i:hover {
+  color: #333;
+}
+
+.container-correos button {
+  padding: 10px;
+  background-color: #485299;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container-correos button:hover {
+  background-color: #333;
+}
+
+/* Estilo del modal */
+.emoji-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji-modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  max-height: 70%;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}

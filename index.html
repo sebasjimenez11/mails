@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="main-title">Bienvenido, envía tus correos</h1>
+      <div class="container">
+        <!-- Left Section: User List -->
+        <div class="container-personas">
+          <h2 class="section-title">Lista de correos</h2>
+          <div class="agregar">
+            <input type="text" placeholder="Agregar correo" />
+            <button type="button">Agregar</button>
+          </div>
+
+          <div class="Persona">
+            <i class="bi bi-person-circle"></i>
+            <p>sebasjimenez@gmail.com</p>
+          </div>
+
+          <div class="Persona">
+            <i class="bi bi-person-circle"></i>
+            <p>maria@example.com</p>
+          </div>
+
+          <div class="Persona">
+            <i class="bi bi-person-circle"></i>
+            <p>john.doe@example.com</p>
+          </div>
+        </div>
+
+        <!-- Right Section: Email Content -->
+        <div class="container-correos">
+          <h2 class="section-title">Contenido del correo</h2>
+          <input type="text" placeholder="Asunto" />
+          <textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
+
+          <div class="buttons">
+            <div class="options">
+              <i class="bi bi-type-bold" onclick="applyStyle('bold')"></i>
+              <i class="bi bi-type-italic" onclick="applyStyle('italic')"></i>
+              <i class="bi bi-type-underline" onclick="applyStyle('underline')"></i>
+              <i class="bi bi-emoji-smile-fill" onclick="toggleEmojiModal()"></i>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emoji Modal -->
+    <div class="emoji-modal" id="emojiModal">
+      <div class="emoji-modal-content">
+        <button class="close-modal" id="closeEmojiModal">&times;</button>
+        <div class="emoji-grid" id="emojiGrid"></div>
+      </div>
+    </div>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
