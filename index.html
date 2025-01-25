@@ -18,41 +18,23 @@
         <div class="container-personas">
           <h2 class="section-title">Lista de correos</h2>
           <div class="agregar">
-            <input type="text" placeholder="Agregar correo" />
-            <button type="button">Agregar</button>
-          </div>
-
-          <div class="Persona">
-            <i class="bi bi-person-circle"></i>
-            <p>sebasjimenez@gmail.com</p>
-          </div>
-
-          <div class="Persona">
-            <i class="bi bi-person-circle"></i>
-            <p>maria@example.com</p>
-          </div>
-
-          <div class="Persona">
-            <i class="bi bi-person-circle"></i>
-            <p>john.doe@example.com</p>
+            <input type="text" placeholder="Agregar correo" id="input-agregar"/>
+            <button type="button" id="btn-agregar">Agregar</button>
           </div>
         </div>
 
         <!-- Right Section: Email Content -->
         <div class="container-correos">
           <h2 class="section-title">Contenido del correo</h2>
-          <input type="text" placeholder="Asunto" />
-          <textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
+          <input type="text" placeholder="Asunto" id="asunto"/>
+          <textarea id="message" placeholder="Escribe tu mensaje..." contenteditable="true"></textarea>
 
           <div class="buttons">
-            <div class="options">
-              <i class="bi bi-type-bold" onclick="applyStyle('bold')"></i>
-              <i class="bi bi-type-italic" onclick="applyStyle('italic')"></i>
-              <i class="bi bi-type-underline" onclick="applyStyle('underline')"></i>
+            <div class="options"> 
               <i class="bi bi-emoji-smile-fill" onclick="toggleEmojiModal()"></i>
             </div>
 
-            <button type="submit">Enviar</button>
+            <button id="enviarCorreo">Enviar</button>
           </div>
         </div>
       </div>
@@ -66,6 +48,9 @@
       </div>
     </div>
 
+    <div id="overlay" class="overlay">
+      <div class="spinner"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
